@@ -9,7 +9,6 @@ namespace CutenessOverload
 {
     class Sprite
     {
-        /* This Sprite Class is used for items such as shooting and stuff. */
         public Texture2D Texture;
 
         protected List<Rectangle> frames = new List<Rectangle>();
