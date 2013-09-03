@@ -66,6 +66,7 @@ namespace CutenessOverload
                                   new Rectangle(164, 0, 163, 147), // Use this part of the superdog texture
                                   new Vector2(60, 20));
 
+            // Add any other initialization code here
         }
 
         /// <summary>
