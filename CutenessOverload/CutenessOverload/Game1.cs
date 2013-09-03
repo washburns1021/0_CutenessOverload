@@ -66,6 +66,8 @@ namespace CutenessOverload
                                   new Rectangle(164, 0, 163, 147), // Use this part of the superdog texture
                                   new Vector2(60, 20));
 
+            superdog.Velocity = new Vector2(0, -600);
+            superdog.Location = new Vector2(300, 900);
         }
 
         /// <summary>
