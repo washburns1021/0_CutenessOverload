@@ -23,7 +23,11 @@ namespace CutenessOverload
 
         Texture2D background;  // This is a Texture2D object that will hold the background picture
         Texture2D superDogSheet;  // What's supdog?
-        Sprite superdog;  // We will load a superdog image into this sprite and make him do awesome things!
+        Sprite superdog; // We will load a superdog image into this sprite and make him do awesome things!
+        Sprite superdog2;
+        Sprite superdog3;
+        Sprite superdog4;
+        Sprite superdog5;
 
         public Game1()
         {
@@ -63,8 +67,24 @@ namespace CutenessOverload
 
             superdog = new Sprite(new Vector2(-150, 30), // Start at x=-150, y=30
                                   superDogSheet, 
-                                  new Rectangle(164, 0, 163, 147), // Use this part of the superdog texture
+                                  new Rectangle(0, 0, 305, 350), // Use this part of the superdog texture
                                   new Vector2(60, 20));
+            superdog2 = new Sprite(new Vector2(-140, 30), // Start at x=-150, y=30
+                                  superDogSheet,
+                                  new Rectangle(0, 0, 305, 350), // Use this part of the superdog texture
+                                  new Vector2(60, 20));
+            superdog3 = new Sprite(new Vector2(-130, 30), // Start at x=-150, y=30
+                                  superDogSheet,
+                                  new Rectangle(0, 0, 305, 350), // Use this part of the superdog texture
+                                  new Vector2(60, 20));
+            superdog4 = new Sprite(new Vector2(0, 50), // Start at x=-150, y=30
+                                  superDogSheet,
+                                  new Rectangle(0, 0, 305, 350), // Use this part of the superdog texture
+                                  new Vector2(60, 30));
+            superdog5 = new Sprite(new Vector2(-110, 30), // Start at x=-150, y=30
+                                  superDogSheet,
+                                  new Rectangle(0, 0, 305, 350), // Use this part of the superdog texture
+                                  new Vector2(60, 30));
 
             // Add any other initialization code here
         }
@@ -90,7 +110,14 @@ namespace CutenessOverload
                 this.Exit();
             
             // TODO: Add your update logic here
-            superdog.Update(gameTime);  // Update the superdog so he moves
+
+
+            superdog.Update(gameTime);
+            superdog2.Update(gameTime);
+            superdog3.Update(gameTime);
+            superdog4.Update(gameTime);
+            superdog5.Update(gameTime);
+
 
             base.Update(gameTime);
         }
@@ -108,6 +135,11 @@ namespace CutenessOverload
             // TODO: Add your drawing code here
             spriteBatch.Draw(background, new Rectangle(0,0,this.Window.ClientBounds.Width,this.Window.ClientBounds.Height), Color.White); // Draw the background at (0,0) - no crazy tinting
             superdog.Draw(spriteBatch);  // Draw the superdog!
+            superdog2.Draw(spriteBatch);
+            superdog3.Draw(spriteBatch);
+            superdog4.Draw(spriteBatch);
+            superdog5.Draw(spriteBatch);
+
 
             spriteBatch.End();
 
