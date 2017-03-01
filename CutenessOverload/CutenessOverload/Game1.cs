@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -28,11 +29,14 @@ namespace CutenessOverload
         Sprite superdog3;
         Sprite superdog4;
         Sprite superdog5;
+        SoundPlayer player = new SoundPlayer();
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            
         }
 
         /// <summary>
@@ -62,7 +66,8 @@ namespace CutenessOverload
                                                                  // texture.. note that under the properties for 
                                                                  // background.jpg in the Solution explorer you 
                                                                  // should see that it has the asset name of "background"
-
+            player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\filthy-frank-nobody-gives-a-shit_2.wav";
+            player.PlayLooping();
             superDogSheet = Content.Load<Texture2D>("superdog");
 
             superdog = new Sprite(new Vector2(-150, 30), // Start at x=-150, y=30
@@ -85,9 +90,13 @@ namespace CutenessOverload
                                   superDogSheet,
                                   new Rectangle(0, 0, 305, 350), // Use this part of the superdog texture
                                   new Vector2(60, 30));
-
             // Add any other initialization code here
         }
+
+
+
+
+
 
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
