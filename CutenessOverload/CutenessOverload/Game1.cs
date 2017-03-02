@@ -66,7 +66,7 @@ namespace CutenessOverload
                                                                  // texture.. note that under the properties for 
                                                                  // background.jpg in the Solution explorer you 
                                                                  // should see that it has the asset name of "background"
-            player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\filthy-frank-nobody-gives-a-shit_2.wav";
+            player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\hitmarker.wav";
             player.PlayLooping();
             superDogSheet = Content.Load<Texture2D>("superdog");
 

@@ -113,11 +113,11 @@
     <Compile Include="Sprite.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="filthy-frank-nobody-gives-a-shit_2.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
+    <Content Include="hitmarker.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CutenessOverloadContent\CutenessOverloadContent.contentproj">
